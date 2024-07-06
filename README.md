@@ -48,6 +48,32 @@ Then do this script
 
 `patch -p1 < fixes.diff`
 
+THEN WE ALSO NEED TO DO RECENT VERSION OF CUDA SO DO THIS
+open CudaSoliditySHA3Miner/CMakeLists.txt
+
+Make it look like this
+
+set(CUDA_NVCC_FLAGS
+  ${CUDA_NVCC_FLAGS}
+  -std=c++11
+  -Xptxas=-O3,-v,-warn-spills
+  -Xcompiler=-O3
+  -use_fast_math
+   -gencode arch=compute_50,code=sm_50
+   -gencode arch=compute_52,code=sm_52
+   -gencode arch=compute_61,code=sm_61
+   -gencode arch=compute_70,code=sm_70
+   -gencode arch=compute_75,code=sm_75
+   -gencode arch=compute_80,code=sm_80
+   -gencode arch=compute_86,code=sm_86
+   -gencode arch=compute_89,code=sm_89
+   -gencode arch=compute_90,code=sm_90
+)
+
+
+
+Then conintue with the rest of the code
+
 `dotnet build SoliditySHA3Miner/SoliditySHA3Miner.csproj -f net5.0 -c Release -o miner`
 
 `cd CudaSoliditySHA3Solver`
