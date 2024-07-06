@@ -4,7 +4,9 @@ Grab the Folder zkBitcoin Miner- Release Ready - Mainnet v05
 
 Then do this script
 
-# install Ubuntu
+# install Ubuntu then run these commands
+
+`sudo apt install curl`
 
 `sudo apt update && sudo apt upgrade -y`
 
