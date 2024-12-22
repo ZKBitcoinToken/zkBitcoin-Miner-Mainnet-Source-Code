@@ -105,8 +105,14 @@ Then conintue with the rest of the code
 
 
 `curl 'https://github.com/Microsoft/LightGBM/releases/download/v2.0.12/AMD-APP-SDKInstaller-v3.0.130.136-GA-linux64.tar.bz2' -O`
-tar -xjf AMD-APP-SDKInstaller-v3.0.130.136-GA-linux64.tar.bz2
-./AMD-APP-SDK-v3.0.130.136-GA-linux64.sh
+
+
+`tar -xjf AMD-APP-SDKInstaller-v3.0.130.136-GA-linux64.tar.bz2`
+
+
+`./AMD-APP-SDK-v3.0.130.136-GA-linux64.sh`
+
+
 
 #install the script. there maybe an issue where u need to copy home/AMDAPPSDK-3.0/lib/sdk/libOpenCL.so.1 to home/AMDAPPSDK-3.0/lib/libOpenCL.so
 
