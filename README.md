@@ -103,6 +103,27 @@ Then conintue with the rest of the code
 
 `cp bin/Release/CPUSoliditySHA3Solver.so ../../miner/`
 
+
+`curl 'https://github.com/Microsoft/LightGBM/releases/download/v2.0.12/AMD-APP-SDKInstaller-v3.0.130.136-GA-linux64.tar.bz2' -O`
+tar -xjf AMD-APP-SDKInstaller-v3.0.130.136-GA-linux64.tar.bz2
+./AMD-APP-SDK-v3.0.130.136-GA-linux64.sh
+
+#install the script. there maybe an issue where u need to copy home/AMDAPPSDK-3.0/lib/sdk/libOpenCL.so.1 to home/AMDAPPSDK-3.0/lib/libOpenCL.so
+
+then should run
+
+`cd ../../OpenCLSoliditySHA3Solver/`
+
+`mkdir build`
+
+`cd build`
+
+`cmake ..`
+
+`make`
+
+`cp bin/Release/OpenCLSoliditySHA3Solver.so ../../miner/`
+
 `cd ../../miner`
 
 `curl 'https://raw.githubusercontent.com/ZKBitcoinToken/Linux-CPU-GPU-zkBitcoin-Miner/main/Linux%20zkBTC%20Mainnet%20Miner%20v05/ERC-20.abi' -O`
